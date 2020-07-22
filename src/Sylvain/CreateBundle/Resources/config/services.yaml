@@ -1,0 +1,6 @@
+services:
+  create.type:
+    class: App\Sylvain\CreateBundle\Type\CreateSubmitType
+    tags: ['form.type']
+    arguments:
+      $key: '%create.key%'
