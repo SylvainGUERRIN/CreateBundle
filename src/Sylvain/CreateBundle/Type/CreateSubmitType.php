@@ -4,6 +4,7 @@
 namespace App\Sylvain\CreateBundle\Type;
 
 
+use App\Sylvain\CreateBundle\Constraints\Create;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormInterface;
@@ -32,7 +33,8 @@ class CreateSubmitType extends AbstractType
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'mapped' => false
+            'mapped' => false,
+            'constraints' => new Create()
         ]);
     }
 
