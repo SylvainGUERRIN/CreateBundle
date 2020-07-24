@@ -3,7 +3,7 @@ services:
     class: App\Sylvain\CreateBundle\Type\CreateSubmitType
     tags: ['form.type']
     arguments:
-      $key: '%create.key%'
+      $key: '%recaptcha.key%'
   create.validator:
     class: App\Sylvain\CreateBundle\Constraints\CreateValidator
     tags: ['validator.constraint_validator']
