@@ -28,7 +28,7 @@ class CreateExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
         //dd($config);
-        $container->setParameter('create.key', $config['key']);
-        $container->setParameter('create.secret', $config['secret']);
+        $container->setParameter('recaptcha.key', $config['key']);
+        $container->setParameter('recaptcha.secret', $config['secret']);
     }
 }

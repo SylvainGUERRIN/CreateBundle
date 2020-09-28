@@ -38,7 +38,7 @@ class CreateValidator extends ConstraintValidator
     public function validate($value, Constraint $constraint): void
     {
         $request = $this->requestStack->getCurrentRequest();
-        $recaptchaResponse = $request->request->get(g-create-response);
+        $recaptchaResponse = $request->request->get(g-recaptcha-response);
         if(empty($recaptchaResponse)){
             $this->addViolation($constraint);
             //$this->context->buildViolation($constraint->message)->addViolation();
